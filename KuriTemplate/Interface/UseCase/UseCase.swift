@@ -2,7 +2,7 @@
 import Foundation
 
 protocol __USECASE__ {
-    func fetch(_ closure: ([__MODEL__]) -> Void)
+    func fetch(_ closure: (__MODEL__s) -> Void)
 }
 
 struct __USECASE__Impl: __USECASE__ {
@@ -14,9 +14,9 @@ struct __USECASE__Impl: __USECASE__ {
         self.translator = translator
     }
 
-    func fetch(_ closure: ([__MODEL__]) -> Void) {
+    func fetch(_ closure: (__MODEL__s) -> Void) {
         repository.fetch {
-            closure($0.map {translator.translate(from: $0)} )
+            closure(translator.translate(from: $0))
         }
     }
 }
