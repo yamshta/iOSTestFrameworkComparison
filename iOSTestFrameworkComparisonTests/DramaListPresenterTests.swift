@@ -27,17 +27,18 @@ class DramaListPresenterTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func test_fetchDramas_success_fetchDramas() {
+
+    // 想定したドラマ数分の取得ができているか
+    func test_fetchDramas_success_numberOfDramas() {
         // Given
-        let expectedNumberOfDramaModels = 3
-        let doramasToBeReturned = DramaModel.createDramaModels()
+        let expectedNumberOfDramas = 3
+        let doramasToBeReturned = DramaModel.createDramas()
         useCaseStub.resulutToBeReturned = doramasToBeReturned
 
         // When
         presenter.fetchDramas()
 
         // Then
-        XCTAssertEqual(expectedNumberOfDramaModels, presenter.dramas.items.count, "Number of dorams missmatch")
+        XCTAssertEqual(expectedNumberOfDramas, presenter.dramas.items.count, "Number of dorams missmatch")
     }
 }

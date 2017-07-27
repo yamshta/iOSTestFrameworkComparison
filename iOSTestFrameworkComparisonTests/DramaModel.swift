@@ -10,7 +10,7 @@ import XCTest
 @testable import iOSTestFrameworkComparison
 
 extension DramaModel {
-    static func createDramaModels() -> DramaModels {
+    static func createDramas() -> DramaModels {
         let dramaEntities: [DramaEntity] = [
             DramaEntity(id: "", title: "Breaking Bad", image_url: "https://www.justwatch.com/images/poster/458429/s718/breaking-bad", season_count: 5),
             DramaEntity(id: "", title: "The Walking Dead", image_url: "https://www.justwatch.com/images/poster/458725/s718/the-walking-dead", season_count: 7),
