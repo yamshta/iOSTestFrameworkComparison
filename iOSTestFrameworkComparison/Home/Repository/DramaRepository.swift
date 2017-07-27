@@ -2,7 +2,7 @@
 import Foundation
 
 protocol DramaRepository {
-    func fetch(_ closure: ([DramaEntity]) -> Void)
+    func fetchDramas(_ closure: ([DramaEntity]) -> Void)
 }
 
 struct DramaRepositoryImpl: DramaRepository {
@@ -12,7 +12,7 @@ struct DramaRepositoryImpl: DramaRepository {
         self.dataStore = dataStore
     }
 
-    func fetch(_ closure: ([DramaEntity]) -> Void) {
-        return dataStore.fetch(closure)
+    func fetchDramas(_ closure: ([DramaEntity]) -> Void) {
+        return dataStore.fetchDramas(closure)
     }
 }

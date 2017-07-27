@@ -11,8 +11,6 @@ class DramaListViewController: UIViewController {
     fileprivate let blankLabel = UILabel()
     fileprivate let activityIndicatorView = UIActivityIndicatorView()
 
-    fileprivate var dramas = [DramaModel]()
-
     fileprivate var presenter: DramaListPresenter!
 
     func inject(presenter: DramaListPresenter) {
@@ -22,7 +20,7 @@ class DramaListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        presenter.fetch()
+        presenter.fetchDramas()
     }
 }
 
@@ -71,28 +69,27 @@ extension DramaListViewController: DramaListViewControllerOutput {
             tableView.isHidden = true
         case .loading:
             activityIndicatorView.startAnimating()
-        case .working(let models):
+        case .working:
             activityIndicatorView.stopAnimating()
             blankLabel.isHidden = true
             tableView.isHidden = false
-            dramas += models.items
             tableView.reloadData()
-        case .error(let error):
-            print(error)
+        case .error:
+            print("error")
         }
     }
 }
 
 extension DramaListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dramas.count
+        return presenter.dramas.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DramaTableViewCell.self), for: indexPath) as? DramaTableViewCell else {
             fatalError("DramaTableViewCell is not found")
         }
-        cell.setData(dramas[indexPath.row])
+        cell.setData(presenter.dramas.items[indexPath.row])
         cell.layoutIfNeeded()
         return cell
     }

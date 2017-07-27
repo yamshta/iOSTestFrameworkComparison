@@ -1,9 +1,7 @@
 
 import UIKit
 
-protocol __VIEW__Output: class {
-    func set__MODEL__s(_: __MODEL__s)
-}
+protocol __VIEW__Output: class {}
 
 class __VIEW__: UIViewController {
 
@@ -27,8 +25,4 @@ extension __VIEW__ {
 }
 
 // MARK: __VIEW__Output
-extension __VIEW__: __VIEW__Output {
-    func set__MODEL__s(_ models: __MODEL__s) {
-
-    }
-}
+extension __VIEW__: __VIEW__Output {}

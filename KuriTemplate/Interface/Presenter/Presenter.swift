@@ -17,10 +17,8 @@ class __PRESENTER__Impl: __PRESENTER__ {
     }
 
     func fetch() {
-        DispatchQueue.main.async { [weak self] in
-            self?.useCase.fetch { (models) in
-                self?.viewController?.set__MODEL__s(models)
-            }
+        self?.useCase.fetch { (models) in
+          
         }
     }
 }

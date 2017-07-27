@@ -2,7 +2,8 @@
 import Foundation
 
 protocol DramaListPresenter: class {
-    func fetch()
+    var dramas: DramaModels { get }
+    func fetchDramas()
 }
 
 class DramaListPresenterImpl: DramaListPresenter {
@@ -10,19 +11,20 @@ class DramaListPresenterImpl: DramaListPresenter {
     private let wireframe: DramaListWireframe
     private let useCase: DramaListUseCase
 
+    internal var dramas = DramaModels()
+
     init(viewController: DramaListViewControllerOutput, wireframe: DramaListWireframe, useCase: DramaListUseCase) {
         self.viewController = viewController
         self.useCase = useCase
         self.wireframe = wireframe
     }
 
-    func fetch() {
-        self.viewController?.setDramaListState(.loading)
-        DispatchQueue.main.async { [weak self] in
-            self?.useCase.fetch { (models) in
-                let state = models.items.isEmpty ? DramaListState.blank : DramaListState.working(models)
-                self?.viewController?.setDramaListState(state)
-            }
+    func fetchDramas() {
+        viewController?.setDramaListState(.loading)
+        useCase.fetchDramas { (models) in
+            self.dramas.items += models.items
+            let state = self.dramas.items.count == 0 ? DramaListState.blank : DramaListState.working
+            self.viewController?.setDramaListState(state)
         }
     }
 }

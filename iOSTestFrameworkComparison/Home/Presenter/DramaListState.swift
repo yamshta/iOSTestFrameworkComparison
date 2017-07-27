@@ -11,8 +11,8 @@ import Foundation
 enum DramaListState {
     case blank
     case loading
-    case working(DramaModels)
-    case error(Error)
+    case working
+    case error
 
     func fetchEnabled() -> Bool {
         switch self {
