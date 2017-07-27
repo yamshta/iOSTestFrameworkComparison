@@ -1,16 +1,16 @@
 
 import Foundation
 
-protocol DramaPresenter: class {
+protocol DramaListPresenter: class {
     func fetch()
 }
 
-class DramaPresenterImpl: DramaPresenter {
-    private weak var viewController: DramaViewControllerOutput?
-    private let wireframe: DramaWireframe
-    private let useCase: DramaUseCase
+class DramaListPresenterImpl: DramaListPresenter {
+    private weak var viewController: DramaListViewControllerOutput?
+    private let wireframe: DramaListWireframe
+    private let useCase: DramaListUseCase
 
-    init(viewController: DramaViewControllerOutput, wireframe: DramaWireframe, useCase: DramaUseCase) {
+    init(viewController: DramaListViewControllerOutput, wireframe: DramaListWireframe, useCase: DramaListUseCase) {
         self.viewController = viewController
         self.useCase = useCase
         self.wireframe = wireframe
@@ -18,8 +18,8 @@ class DramaPresenterImpl: DramaPresenter {
 
     func fetch() {
         DispatchQueue.main.async { [weak self] in
-            self?.useCase.fetch { (model) in
-                self?.viewController?.setdramasModel(model)
+            self?.useCase.fetch { (models) in
+                self?.viewController?.setDramaModels(models)
             }
         }
     }

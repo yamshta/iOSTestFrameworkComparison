@@ -3,18 +3,18 @@ import UIKit
 
 struct DramaBuilder {
     static func build() -> UIViewController {
-        let viewController = DramaViewController()
+        let viewController = DramaListViewController()
         viewController.inject(
-            presenter: DramaPresenterImpl(
+            presenter: DramaListPresenterImpl(
                 viewController: viewController,
-                wireframe: DramaWireframeImpl(
+                wireframe: DramaListWireframeImpl(
                     viewController: viewController
                 ),
-                useCase: DramaUseCaseImpl(
+                useCase: DramaListUseCaseImpl(
                     repository: DramaRepositoryImpl (
                         dataStore: DramaDataStoreImpl()
                     ),
-                    translator: DramaTranslatorImpl()
+                    translator: DramaListTranslatorImpl()
                 )
             )
         )

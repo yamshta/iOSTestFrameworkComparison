@@ -1,51 +1,66 @@
 
 import UIKit
 
-protocol DramaViewControllerOutput: class {
-    func setdramasModel(_: DramasModel)
+protocol DramaListViewControllerOutput: class {
+    func setDramaModels(_: DramaModels)
 }
 
-class DramaViewController: UIViewController {
+class DramaListViewController: UIViewController {
 
-    var tableView = UITableView()
+    fileprivate var tableView = UITableView()
 
-    fileprivate var presenter: DramaPresenter!
+    fileprivate var dramas = [DramaModel]()
 
-    func inject(presenter: DramaPresenter) {
+    fileprivate var presenter: DramaListPresenter!
+
+    func inject(presenter: DramaListPresenter) {
         self.presenter = presenter
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        presenter.fetch()
     }
 }
 
 // MARK: Private and Set Condition
-extension DramaViewController {
+extension DramaListViewController {
     fileprivate func setupUI() {
         view.backgroundColor = UIColor.white
 
+        view.addSubview(tableView)
+        tableView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 100
+        tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        tableView.allowsSelection = false
+        tableView.register(DramaTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(DramaTableViewCell.self))
     }
 }
 
-// MARK: DramaViewControllerOutput
-extension DramaViewController: DramaViewControllerOutput {
-    func setdramasModel(_ model: DramasModel) {
-
+// MARK: DramaListViewControllerOutput
+extension DramaListViewController: DramaListViewControllerOutput {
+    func setDramaModels(_ models: DramaModels) {
+        dramas = models.items
+        tableView.reloadData()
     }
 }
 
-extension DramaViewController: UITableViewDataSource {
+extension DramaListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dramas.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: <#T##String#>, for: <#T##IndexPath#>)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DramaTableViewCell.self), for: indexPath) as? DramaTableViewCell else {
+            fatalError("DramaTableViewCell is not found")
+        }
+        cell.setData(dramas[indexPath.row])
+        cell.layoutIfNeeded()
+        return cell
     }
 }
 
-extension DramaViewController: UITableViewDelegate {}
+extension DramaListViewController: UITableViewDelegate {}

@@ -1,14 +1,14 @@
 
 import UIKit
 
-protocol DramaWireframe: class {
-    weak var viewController: DramaViewController? { get set }
+protocol DramaListWireframe: class {
+    weak var viewController: DramaListViewController? { get set }
 }
 
-class DramaWireframeImpl: DramaWireframe {
-    weak var viewController: dramaViewController?
+class DramaListWireframeImpl: DramaListWireframe {
+    weak var viewController: DramaListViewController?
 
-    init(viewController: DramaViewController) {
+    init(viewController: DramaListViewController) {
         self.viewController = viewController
     }
 }

@@ -7,13 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */; };
+		7WKA16J39E8L4AQ8TOBN71U4 /* DramaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */; };
+		9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */; };
 		93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */; };
-		93C331E01F28DD64007FD5C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DF1F28DD64007FD5C2 /* ViewController.swift */; };
-		93C331E31F28DD64007FD5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E11F28DD64007FD5C2 /* Main.storyboard */; };
 		93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E41F28DD64007FD5C2 /* Assets.xcassets */; };
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
 		93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331F21F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift */; };
 		93C331FE1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */; };
+		AR2BR88JNOZWAUK6TAM0XJIW /* DramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */; };
+		BMS83IMB9C47YPRYI0CVDCWF /* DramaListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */; };
+		IMN0Q2IMFL0IKPD0AS4H4H4S /* DramaDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */; };
+		K981YIE0QG7BK2DL1QUHAUG4 /* DramaListTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */; };
+		NNZIE62UK2HCHZNOW4BXYI16 /* DramaListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */; };
+		XAS3MXJUTB73XYNWBEWCJZMK /* DramaListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */; };
+		XOPIORBOHTZMVI8SJRW9BQY9 /* DramaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */; };
+		Y56BG1DCD94HGN7KU8QDDV4Z /* DramaListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListModel.swift; path = ../Model/DramaListModel.swift; sourceTree = "<group>"; };
+		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaRepository.swift; path = ../Repository/DramaRepository.swift; sourceTree = "<group>"; };
+		9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
 		93C331DA1F28DD64007FD5C2 /* iOSTestFrameworkComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestFrameworkComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		93C331DF1F28DD64007FD5C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		93C331E21F28DD64007FD5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		93C331E41F28DD64007FD5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93C331E71F28DD64007FD5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93C331E91F28DD64007FD5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		93C331F91F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTestFrameworkComparisonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestFrameworkComparisonUITests.swift; sourceTree = "<group>"; };
 		93C331FF1F28DD64007FD5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaDataStore.swift; sourceTree = "<group>"; };
+		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListBuilder.swift; path = Builder/DramaListBuilder.swift; sourceTree = "<group>"; };
+		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListTranslator.swift; path = ../Translator/DramaListTranslator.swift; sourceTree = "<group>"; };
+		K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListWireframe.swift; path = Wireframe/DramaListWireframe.swift; sourceTree = "<group>"; };
+		MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaEntity.swift; path = ../Entity/DramaEntity.swift; sourceTree = "<group>"; };
+		TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListUseCase.swift; sourceTree = "<group>"; };
+		VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
+		XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EXKI1PGBS8SXA6DBN9Z1G91 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */,
+				K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */,
+				2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */,
+			);
+			name = Domain;
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 		93C331D11F28DD64007FD5C2 = {
 			isa = PBXGroup;
 			children = (
@@ -98,11 +127,11 @@
 			isa = PBXGroup;
 			children = (
 				93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */,
-				93C331DF1F28DD64007FD5C2 /* ViewController.swift */,
-				93C331E11F28DD64007FD5C2 /* Main.storyboard */,
 				93C331E41F28DD64007FD5C2 /* Assets.xcassets */,
 				93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */,
 				93C331E91F28DD64007FD5C2 /* Info.plist */,
+				T8TKKZCLX945C4XSDUZ2RXBS /* Data */,
+				EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */,
 			);
 			path = iOSTestFrameworkComparison;
 			sourceTree = "<group>";
@@ -123,6 +152,67 @@
 				93C331FF1F28DD64007FD5C2 /* Info.plist */,
 			);
 			path = iOSTestFrameworkComparisonUITests;
+			sourceTree = "<group>";
+		};
+		CNSDIXQDFD72PBOD3ZB5BC02 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */,
+				9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */,
+			);
+			name = View;
+			path = ../View;
+			sourceTree = "<group>";
+		};
+		CZ3ZURBZELZBH8JD0XONT4FA /* DramaList */ = {
+			isa = PBXGroup;
+			children = (
+				HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */,
+				K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */,
+				6EXKI1PGBS8SXA6DBN9Z1G91 /* Domain */,
+				FMRNA1R0NV2PSLM17WFBZK0E /* Presentation */,
+			);
+			name = DramaList;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CZ3ZURBZELZBH8JD0XONT4FA /* DramaList */,
+			);
+			name = Scenes;
+			path = Home/Repository;
+			sourceTree = "<group>";
+		};
+		FMRNA1R0NV2PSLM17WFBZK0E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */,
+				CNSDIXQDFD72PBOD3ZB5BC02 /* View */,
+			);
+			name = Presentation;
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		T8TKKZCLX945C4XSDUZ2RXBS /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				TBXN9R54P4KJ3L9QZHRDLQ6R /* Drama */,
+			);
+			name = Data;
+			path = Home/Entity;
+			sourceTree = "<group>";
+		};
+		TBXN9R54P4KJ3L9QZHRDLQ6R /* Drama */ = {
+			isa = PBXGroup;
+			children = (
+				MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */,
+				GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */,
+				78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */,
+			);
+			name = Drama;
+			path = ../DataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +327,6 @@
 			files = (
 				93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */,
 				93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */,
-				93C331E31F28DD64007FD5C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +351,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93C331E01F28DD64007FD5C2 /* ViewController.swift in Sources */,
 				93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */,
+				XOPIORBOHTZMVI8SJRW9BQY9 /* DramaEntity.swift in Sources */,
+				IMN0Q2IMFL0IKPD0AS4H4H4S /* DramaDataStore.swift in Sources */,
+				9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */,
+				4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */,
+				Y56BG1DCD94HGN7KU8QDDV4Z /* DramaListUseCase.swift in Sources */,
+				K981YIE0QG7BK2DL1QUHAUG4 /* DramaListTranslator.swift in Sources */,
+				BMS83IMB9C47YPRYI0CVDCWF /* DramaListModel.swift in Sources */,
+				NNZIE62UK2HCHZNOW4BXYI16 /* DramaListPresenter.swift in Sources */,
+				AR2BR88JNOZWAUK6TAM0XJIW /* DramaListViewController.swift in Sources */,
+				XAS3MXJUTB73XYNWBEWCJZMK /* DramaListWireframe.swift in Sources */,
+				7WKA16J39E8L4AQ8TOBN71U4 /* DramaListBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,14 +398,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		93C331E11F28DD64007FD5C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93C331E21F28DD64007FD5C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -514,6 +605,7 @@
 				93C332041F28DD64007FD5C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C332051F28DD64007FD5C2 /* Build configuration list for PBXNativeTarget "iOSTestFrameworkComparisonTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +614,7 @@
 				93C332071F28DD64007FD5C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C332081F28DD64007FD5C2 /* Build configuration list for PBXNativeTarget "iOSTestFrameworkComparisonUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +623,7 @@
 				93C3320A1F28DD64007FD5C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,5 +2,8 @@
 import Foundation
 
 struct DramaEntity {
-    let id: Int
+    let id: String
+    let title: String
+    let image_url: String
+    let season_count: Int
 }

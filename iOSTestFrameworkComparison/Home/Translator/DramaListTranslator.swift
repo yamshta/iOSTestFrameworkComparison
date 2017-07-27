@@ -1,27 +1,27 @@
 
 import Foundation
 
-protocol DramaTranslator {
-    func translate(from entity: [DramaEntity]) -> DramasModel
+protocol DramaListTranslator {
+    func translate(from entity: [DramaEntity]) -> DramaModels
 //    func translate(from model: DramasModel) -> [DramaEntity]
 }
 
-struct DramaTranslatorImpl: DramaTranslator {
-    func translate(from entity: [DramaEntity]) -> DramasModel {
-        var dramasModel = DramasModel()
+struct DramaListTranslatorImpl: DramaListTranslator {
+    func translate(from entity: [DramaEntity]) -> DramaModels {
+        var models = DramaModels()
         entity.forEach { rowEntity in
-            let dramaModel = DramaModel(id: rowEntity.id)
-            dramasModel.items.append(dramaModel)
+            let model = DramaModel(data: rowEntity)
+            models.items.append(model)
         }
-        return dramasModel
+        return models
     }
 
-//    func translate(from model: DramasModel) -> [DramaEntity] {
-//        var dramasEntity = [DramaEntity]()
+//    func translate(from model: DramaModels) -> [DramaEntity] {
+//        var entities = [DramaEntity]()
 //        model.items.forEach { rowModel in
-//            let dramaEntity = DramaEntity(id: rowModel.id)
-//            dramasEntity.append(dramaEntity)
+//            let entity = DramaEntity(id: rowModel.id)
+//            entities.append(entity)
 //        }
-//        return dramasEntity
+//        return entities
 //    }
 }

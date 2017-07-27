@@ -1,20 +1,20 @@
 
 import Foundation
 
-protocol DramaUseCase {
-    func fetch(_ closure: @escaping (DramasModel) -> Void)
+protocol DramaListUseCase {
+    func fetch(_ closure: @escaping (DramaModels) -> Void)
 }
 
-struct DramaUseCaseImpl: DramaUseCase {
+struct DramaListUseCaseImpl: DramaListUseCase {
     private let repository: DramaRepository
-    private let translator: DramaTranslator
+    private let translator: DramaListTranslator
 
-    init(repository: DramaRepository, translator: DramaTranslator) {
+    init(repository: DramaRepository, translator: DramaListTranslator) {
         self.repository = repository
         self.translator = translator
     }
 
-    func fetch(_ closure: @escaping (DramasModel) -> Void) {
+    func fetch(_ closure: @escaping (DramaModels) -> Void) {
         repository.fetch {
             closure(translator.translate(from: $0))
         }
