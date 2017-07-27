@@ -12,7 +12,6 @@ class DramaTableViewCell: UITableViewCell {
 
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
-//        imageView.backgroundColor = UIColor.groupTableViewBackground
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -46,7 +45,6 @@ class DramaTableViewCell: UITableViewCell {
         thumbnailImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         thumbnailImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         thumbnailImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/6).isActive = true
-//        thumbnailImageView.heightAnchor.constraint(equalTo: thumbnailImageView.widthAnchor, multiplier: 1/2).isActive = true
         thumbnailImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         thumbnailImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
 

@@ -17,9 +17,11 @@ class DramaListPresenterImpl: DramaListPresenter {
     }
 
     func fetch() {
+        self.viewController?.setDramaListState(.loading)
         DispatchQueue.main.async { [weak self] in
             self?.useCase.fetch { (models) in
-                self?.viewController?.setDramaModels(models)
+                let state = models.items.isEmpty ? DramaListState.blank : DramaListState.working(models)
+                self?.viewController?.setDramaListState(state)
             }
         }
     }

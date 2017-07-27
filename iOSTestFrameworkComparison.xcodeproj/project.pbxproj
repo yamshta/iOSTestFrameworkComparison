@@ -15,6 +15,7 @@
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
 		93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331F21F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift */; };
 		93C331FE1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */; };
+		93F79E9C1F29B5A500028EBA /* DramaListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F79E9B1F29B5A500028EBA /* DramaListState.swift */; };
 		AR2BR88JNOZWAUK6TAM0XJIW /* DramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */; };
 		BMS83IMB9C47YPRYI0CVDCWF /* DramaListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */; };
 		IMN0Q2IMFL0IKPD0AS4H4H4S /* DramaDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */; };
@@ -57,6 +58,7 @@
 		93C331F91F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTestFrameworkComparisonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestFrameworkComparisonUITests.swift; sourceTree = "<group>"; };
 		93C331FF1F28DD64007FD5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F79E9B1F29B5A500028EBA /* DramaListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListState.swift; sourceTree = "<group>"; };
 		GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaDataStore.swift; sourceTree = "<group>"; };
 		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListBuilder.swift; path = Builder/DramaListBuilder.swift; sourceTree = "<group>"; };
 		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListTranslator.swift; path = ../Translator/DramaListTranslator.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 		93C331DC1F28DD64007FD5C2 /* iOSTestFrameworkComparison */ = {
 			isa = PBXGroup;
 			children = (
+				93F79E9D1F29BB6900028EBA /* Utility */,
 				93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */,
 				93C331E41F28DD64007FD5C2 /* Assets.xcassets */,
 				93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */,
@@ -152,6 +155,13 @@
 				93C331FF1F28DD64007FD5C2 /* Info.plist */,
 			);
 			path = iOSTestFrameworkComparisonUITests;
+			sourceTree = "<group>";
+		};
+		93F79E9D1F29BB6900028EBA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 		CNSDIXQDFD72PBOD3ZB5BC02 /* View */ = {
@@ -188,6 +198,7 @@
 		FMRNA1R0NV2PSLM17WFBZK0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				93F79E9B1F29B5A500028EBA /* DramaListState.swift */,
 				XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */,
 				CNSDIXQDFD72PBOD3ZB5BC02 /* View */,
 			);
@@ -356,6 +367,7 @@
 				IMN0Q2IMFL0IKPD0AS4H4H4S /* DramaDataStore.swift in Sources */,
 				9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */,
 				4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */,
+				93F79E9C1F29B5A500028EBA /* DramaListState.swift in Sources */,
 				Y56BG1DCD94HGN7KU8QDDV4Z /* DramaListUseCase.swift in Sources */,
 				K981YIE0QG7BK2DL1QUHAUG4 /* DramaListTranslator.swift in Sources */,
 				BMS83IMB9C47YPRYI0CVDCWF /* DramaListModel.swift in Sources */,
