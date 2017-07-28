@@ -19,11 +19,10 @@ class DramaListPresenterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-
         presenter = DramaListPresenterImpl(viewController: viewControllerSpy, wireframe: wireframe, useCase: useCaseStub)
     }
 
-    // 想定通りにドラマ数分の取得ができているか
+    // ドラマ数が３つになっていること
     func test_fetchDramas_success_numberOfDramas() {
         // Given
         let expectedNumberOfDramas = 3
@@ -37,7 +36,7 @@ class DramaListPresenterTests: XCTestCase {
         XCTAssertEqual(expectedNumberOfDramas, presenter.dramas.items.count)
     }
 
-    // 想定通りにDramaListStateがセットされているか（データが存在しない）
+    // ドラマが存在しない場合、DramaListStateに.blankがセットされていること
     func test_fetchDramas_success_setDramaListState_blank() {
         // Given
         let expectedDramaListState = DramaListState.blank
@@ -51,7 +50,7 @@ class DramaListPresenterTests: XCTestCase {
         XCTAssertEqual(expectedDramaListState, viewControllerSpy.dramaListState)
     }
 
-    // 想定通りにDramaListStateがセットされているか（データが存在する）
+    // ドラマが存在する場合、DramaListStateに.workingがセットされていること
     func test_fetchDramas_success_setDramaListState_working() {
         // Given
         let expectedDramaListState = DramaListState.working
@@ -65,7 +64,7 @@ class DramaListPresenterTests: XCTestCase {
         XCTAssertEqual(expectedDramaListState, viewControllerSpy.dramaListState)
     }
 
-//    // 想定通りにDramaListStateがセットされているか（エラー）
+//    // エラーの場合、DramaListStateに.errorがセットされていること
 //    func test_fetchDramas_success_setDramaListState_working() {
 //    }
 }

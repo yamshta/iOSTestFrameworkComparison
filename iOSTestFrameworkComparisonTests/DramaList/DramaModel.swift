@@ -10,6 +10,7 @@ import XCTest
 @testable import iOSTestFrameworkComparison
 
 extension DramaModel {
+    // 与えられた数値分モデルを渡す
     static func createDramas(numberOfElements number: Int) -> DramaModels {
         var dramaModels = DramaModels()
         for i in 0..<number {

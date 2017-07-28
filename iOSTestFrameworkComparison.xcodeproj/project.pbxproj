@@ -10,10 +10,11 @@
 		4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */; };
 		7WKA16J39E8L4AQ8TOBN71U4 /* DramaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */; };
 		9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */; };
-		9367434E1F2B1C48005B69EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; };
-		9367434F1F2B1C48005B69EA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; };
-		936743521F2B1C97005B69EA /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		936743531F2B1C97005B69EA /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		936743561F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */; };
+		936743581F2B3A20005B69EA /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		936743591F2B3A20005B69EA /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9367435B1F2B3AA0005B69EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; };
+		9367435C1F2B3AA0005B69EA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; };
 		93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */; };
 		93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E41F28DD64007FD5C2 /* Assets.xcassets */; };
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
@@ -54,25 +55,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		936743511F2B1C87005B69EA /* CopyFiles */ = {
+		936743571F2B3A14005B69EA /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				936743521F2B1C97005B69EA /* Nimble.framework in CopyFiles */,
-				936743531F2B1C97005B69EA /* Quick.framework in CopyFiles */,
+				936743581F2B3A20005B69EA /* Nimble.framework in CopyFiles */,
+				936743591F2B3A20005B69EA /* Quick.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListModel.swift; path = DramaListModel.swift; sourceTree = "<group>"; };
-		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaRepository.swift; path = DramaRepository.swift; sourceTree = "<group>"; };
+		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListModel.swift; sourceTree = "<group>"; };
+		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaRepository.swift; sourceTree = "<group>"; };
 		9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
 		9367434C1F2B1C48005B69EA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9367434D1F2B1C48005B69EA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickDramaListPresenterTests.swift; path = iOSTestFrameworkComparisonTests/QuickDramaListPresenterTests.swift; sourceTree = SOURCE_ROOT; };
 		93C331DA1F28DD64007FD5C2 /* iOSTestFrameworkComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestFrameworkComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C331E41F28DD64007FD5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,10 +94,10 @@
 		93F79EAD1F2A252A00028EBA /* DramaListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListModelTests.swift; sourceTree = "<group>"; };
 		93F79EB01F2A255000028EBA /* DramaListTranslatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTranslatorTests.swift; sourceTree = "<group>"; };
 		GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaDataStore.swift; sourceTree = "<group>"; };
-		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListBuilder.swift; path = DramaListBuilder.swift; sourceTree = "<group>"; };
-		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListTranslator.swift; path = DramaListTranslator.swift; sourceTree = "<group>"; };
-		K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListWireframe.swift; path = DramaListWireframe.swift; sourceTree = "<group>"; };
-		MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaEntity.swift; path = DramaEntity.swift; sourceTree = "<group>"; };
+		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListBuilder.swift; sourceTree = "<group>"; };
+		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTranslator.swift; sourceTree = "<group>"; };
+		K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListWireframe.swift; sourceTree = "<group>"; };
+		MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaEntity.swift; sourceTree = "<group>"; };
 		TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListUseCase.swift; sourceTree = "<group>"; };
 		VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
 		XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListPresenter.swift; sourceTree = "<group>"; };
@@ -106,8 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9367434E1F2B1C48005B69EA /* Nimble.framework in Frameworks */,
-				9367434F1F2B1C48005B69EA /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9367435B1F2B3AA0005B69EA /* Nimble.framework in Frameworks */,
+				9367435C1F2B3AA0005B69EA /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +137,6 @@
 				K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */,
 				TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */,
 			);
-			name = Domain;
 			path = Domain;
 			sourceTree = "<group>";
 		};
@@ -151,8 +152,8 @@
 		936743541F2B2C2B005B69EA /* Quick */ = {
 			isa = PBXGroup;
 			children = (
+				936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
@@ -214,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Utility;
 			path = Utility;
 			sourceTree = "<group>";
 		};
@@ -227,7 +227,6 @@
 				93F79EAB1F29F65100028EBA /* DramaListViewControllerSpy.swift */,
 				93F79EA51F29D16000028EBA /* DramaModel.swift */,
 			);
-			name = DramaList;
 			path = DramaList;
 			sourceTree = "<group>";
 		};
@@ -238,7 +237,6 @@
 				93F79EA31F29CA2A00028EBA /* DramaListPresenterTests.swift */,
 				93F79EB01F2A255000028EBA /* DramaListTranslatorTests.swift */,
 			);
-			name = XCTest;
 			path = XCTest;
 			sourceTree = "<group>";
 		};
@@ -248,7 +246,6 @@
 				VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */,
 				9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -260,7 +257,6 @@
 				HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */,
 				K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */,
 			);
-			name = DramaList;
 			path = DramaList;
 			sourceTree = "<group>";
 		};
@@ -269,7 +265,6 @@
 			children = (
 				CZ3ZURBZELZBH8JD0XONT4FA /* DramaList */,
 			);
-			name = Scenes;
 			path = Scenes;
 			sourceTree = "<group>";
 		};
@@ -280,7 +275,6 @@
 				XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */,
 				93F79E9B1F29B5A500028EBA /* DramaListState.swift */,
 			);
-			name = Presentation;
 			path = Presentation;
 			sourceTree = "<group>";
 		};
@@ -289,7 +283,6 @@
 			children = (
 				TBXN9R54P4KJ3L9QZHRDLQ6R /* Drama */,
 			);
-			name = Data;
 			path = Data;
 			sourceTree = "<group>";
 		};
@@ -300,7 +293,6 @@
 				MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */,
 				78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */,
 			);
-			name = Drama;
 			path = Drama;
 			sourceTree = "<group>";
 		};
@@ -314,7 +306,6 @@
 				93C331D61F28DD64007FD5C2 /* Sources */,
 				93C331D71F28DD64007FD5C2 /* Frameworks */,
 				93C331D81F28DD64007FD5C2 /* Resources */,
-				936743511F2B1C87005B69EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -332,6 +323,7 @@
 				93C331EA1F28DD64007FD5C2 /* Sources */,
 				93C331EB1F28DD64007FD5C2 /* Frameworks */,
 				93C331EC1F28DD64007FD5C2 /* Resources */,
+				936743571F2B3A14005B69EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -465,6 +457,7 @@
 				93F79EB11F2A255000028EBA /* DramaListTranslatorTests.swift in Sources */,
 				93F79EA41F29CA2A00028EBA /* DramaListPresenterTests.swift in Sources */,
 				93F79EA81F29E7E000028EBA /* DramaListUseCaseStub.swift in Sources */,
+				936743561F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift in Sources */,
 				93F79EAE1F2A252A00028EBA /* DramaListModelTests.swift in Sources */,
 				93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */,
 				93F79EA61F29D16000028EBA /* DramaModel.swift in Sources */,
@@ -640,6 +633,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5XFK456LHV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTestFrameworkComparisonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shymst.iOSTestFrameworkComparisonTests;
@@ -655,6 +652,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5XFK456LHV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTestFrameworkComparisonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shymst.iOSTestFrameworkComparisonTests;
