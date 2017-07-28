@@ -14,7 +14,8 @@ struct DramaDataStoreImpl: DramaDataStore {
             DramaEntity(id: "", title: "Black Mirror", image_url: "https://www.justwatch.com/images/poster/459370/s718/black-mirror", season_count: 3),
             DramaEntity(id: "", title: "SHERLOCK", image_url: "https://www.justwatch.com/images/poster/499868/s718/sherlock", season_count: 4),
             DramaEntity(id: "", title: "Silicon Valley", image_url: "https://www.justwatch.com/images/poster/491474/s718/silicon-valley", season_count: 4),
-            DramaEntity(id: "", title: "Game of Thrones", image_url: "https://www.justwatch.com/images/poster/10109360/s718/game-of-thrones", season_count: 7)
+            DramaEntity(id: "", title: "Game of Thrones", image_url: "https://www.justwatch.com/images/poster/10109360/s718/game-of-thrones", season_count: 7),
+            DramaEntity(id: "", title: "Marvel's Agents of S.H.I.E.L.D.", image_url: "https://www.justwatch.com/images/poster/458539/s718/marvels-agents-of-s-h-i-e-l-d", season_count: 4)
         ]
         closure(dramaEntities)
     }

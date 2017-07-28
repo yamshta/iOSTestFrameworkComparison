@@ -10,6 +10,10 @@
 		4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */; };
 		7WKA16J39E8L4AQ8TOBN71U4 /* DramaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */; };
 		9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */; };
+		9367434E1F2B1C48005B69EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; };
+		9367434F1F2B1C48005B69EA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; };
+		936743521F2B1C97005B69EA /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		936743531F2B1C97005B69EA /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */; };
 		93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E41F28DD64007FD5C2 /* Assets.xcassets */; };
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
@@ -49,10 +53,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		936743511F2B1C87005B69EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				936743521F2B1C97005B69EA /* Nimble.framework in CopyFiles */,
+				936743531F2B1C97005B69EA /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListModel.swift; path = ../Model/DramaListModel.swift; sourceTree = "<group>"; };
 		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaRepository.swift; path = ../Repository/DramaRepository.swift; sourceTree = "<group>"; };
 		9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
+		9367434C1F2B1C48005B69EA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		9367434D1F2B1C48005B69EA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		93C331DA1F28DD64007FD5C2 /* iOSTestFrameworkComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestFrameworkComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C331E41F28DD64007FD5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9367434E1F2B1C48005B69EA /* Nimble.framework in Frameworks */,
+				9367434F1F2B1C48005B69EA /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +139,15 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		9367434B1F2B1C48005B69EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9367434C1F2B1C48005B69EA /* Nimble.framework */,
+				9367434D1F2B1C48005B69EA /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93C331D11F28DD64007FD5C2 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +155,7 @@
 				93C331F11F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests */,
 				93C331FC1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests */,
 				93C331DB1F28DD64007FD5C2 /* Products */,
+				9367434B1F2B1C48005B69EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +302,7 @@
 				93C331D61F28DD64007FD5C2 /* Sources */,
 				93C331D71F28DD64007FD5C2 /* Frameworks */,
 				93C331D81F28DD64007FD5C2 /* Resources */,
+				936743511F2B1C87005B69EA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -559,6 +592,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5XFK456LHV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTestFrameworkComparison/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shymst.iOSTestFrameworkComparison;
@@ -572,6 +609,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5XFK456LHV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iOSTestFrameworkComparison/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shymst.iOSTestFrameworkComparison;

@@ -90,7 +90,6 @@ extension DramaListViewController: UITableViewDataSource {
             fatalError("DramaTableViewCell is not found")
         }
         cell.setData(presenter.dramas.items[indexPath.row])
-        cell.layoutIfNeeded()
         return cell
     }
 }

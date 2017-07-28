@@ -52,11 +52,12 @@ class DramaTableViewCell: UITableViewCell {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: thumbnailImageView.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
         addSubview(seasonCountLabel)
         seasonCountLabel.translatesAutoresizingMaskIntoConstraints = false
-        seasonCountLabel.topAnchor.constraint(equalTo: thumbnailImageView.topAnchor).isActive = true
-        seasonCountLabel.leadingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 5).isActive = true
+        seasonCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
+        seasonCountLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
         seasonCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
     }
 
@@ -76,6 +77,6 @@ class DramaTableViewCell: UITableViewCell {
         }
 
         titleLabel.text = drama.title
-        seasonCountLabel.text = "全 \(drama.seasonCount) season"
+        seasonCountLabel.text = "\(drama.seasonCount) seasons"
     }
 }
