@@ -12,22 +12,21 @@ import Nimble
 @testable import iOSTestFrameworkComparison
 
 class QuickDramaListPresenterTests: QuickSpec {
-
     // ここにテストコードを書いていく
     override func spec() {
-        describe("ドラマ（複数）を取得する") {
-            // DI(Dependency injection)
-            let viewControllerSpy = DramaListViewControllerSpy()
-            let wireframe = DramaListWireframeImpl(viewController: DramaListViewController())
-            let useCaseStub = DramaListUseCaseStub()
+        // DI(Dependency injection)
+        let viewControllerSpy = DramaListViewControllerSpy()
+        let wireframe = DramaListWireframeImpl(viewController: DramaListViewController())
+        let useCaseStub = DramaListUseCaseStub()
 
-            // 対象のレイヤ
-            var presenter: DramaListPresenterImpl!
+        // 対象のレイヤ
+        var presenter: DramaListPresenterImpl!
 
-            // テストで使う変数
-            var expectedNumberOfDramas: Int!
-            var doramasToBeReturned: DramaModels!
+        // テストで使う変数
+        var expectedNumberOfDramas: Int!
+        var doramasToBeReturned: DramaModels!
 
+        describe("ドラマの取得について") {
             beforeEach {
                 presenter = DramaListPresenterImpl(viewController: viewControllerSpy, wireframe: wireframe, useCase: useCaseStub)
             }
@@ -39,38 +38,37 @@ class QuickDramaListPresenterTests: QuickSpec {
                     useCaseStub.resulutToBeReturned = doramasToBeReturned
                     presenter.fetchDramas()
                 }
-                it("expectedNumberOfDramasとdramas.items.countが等しいこと") {
+                it("ドラマ数とexpectedNumberOfDramasが等しいこと") {
                     expect(presenter.dramas.items.count).to(equal(expectedNumberOfDramas))
                 }
             }
+        }
 
-
-            describe("DramaListStateをセットする") {
-                context("ドラマ数が3の場合") {
-                    beforeEach {
-                        doramasToBeReturned = DramaModel.createDramas(numberOfElements: 0)
-                        useCaseStub.resulutToBeReturned = doramasToBeReturned
-                        presenter.fetchDramas()
-                    }
-                    it("viewControllerSpy.dramaListStateが.blankであること") {
-                        expect(viewControllerSpy.dramaListState).to(equal(DramaListState.blank))
-                    }
+        describe("DramaListStateについて") {
+            context("ドラマ数が3の場合") {
+                beforeEach {
+                    doramasToBeReturned = DramaModel.createDramas(numberOfElements: 0)
+                    useCaseStub.resulutToBeReturned = doramasToBeReturned
+                    presenter.fetchDramas()
                 }
-
-                context("ドラマが存在しない場合") {
-                    beforeEach {
-                        doramasToBeReturned = DramaModel.createDramas(numberOfElements: 3)
-                        useCaseStub.resulutToBeReturned = doramasToBeReturned
-                        presenter.fetchDramas()
-                    }
-                    it("viewControllerSpy.dramaListStateが.workingであること") {
-                        expect(viewControllerSpy.dramaListState).to(equal(DramaListState.working))
-                    }
+                it("viewControllerSpy.dramaListStateが.blankであること") {
+                    expect(viewControllerSpy.dramaListState).to(equal(DramaListState.blank))
                 }
+            }
 
-                context("エラーの場合") {
-                    it("viewControllerSpy.dramaListStateが.errorであること") {
-                    }
+            context("ドラマが存在しない場合") {
+                beforeEach {
+                    doramasToBeReturned = DramaModel.createDramas(numberOfElements: 3)
+                    useCaseStub.resulutToBeReturned = doramasToBeReturned
+                    presenter.fetchDramas()
+                }
+                it("viewControllerSpy.dramaListStateが.workingであること") {
+                    expect(viewControllerSpy.dramaListState).to(equal(DramaListState.working))
+                }
+            }
+
+            context("エラーの場合") {
+                it("viewControllerSpy.dramaListStateが.errorであること") {
                 }
             }
         }
