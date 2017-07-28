@@ -57,6 +57,11 @@ extension DramaListViewController {
         activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
+
+    @objc fileprivate func changeValueSlider(_ sender: UISlider) {
+        sender.value = round(sender.value)
+        sender.setThumbImageValue()
+    }
 }
 
 // MARK: DramaListViewControllerOutput
@@ -90,6 +95,7 @@ extension DramaListViewController: UITableViewDataSource {
             fatalError("DramaTableViewCell is not found")
         }
         cell.setData(presenter.dramaList.items[indexPath.row])
+        cell.slider.addTarget(self, action: #selector(DramaListViewController.changeValueSlider(_:)), for: [.valueChanged, .touchUpInside]) // 簡易的に
         return cell
     }
 }

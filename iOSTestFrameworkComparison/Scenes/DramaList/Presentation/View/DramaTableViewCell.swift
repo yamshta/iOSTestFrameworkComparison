@@ -30,6 +30,11 @@ class DramaTableViewCell: UITableViewCell {
         return label
     }()
 
+    let slider: UISlider = {
+        let slider = UISlider()
+        return slider
+    }()
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -48,6 +53,12 @@ class DramaTableViewCell: UITableViewCell {
         thumbnailImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
         thumbnailImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
 
+        thumbnailImageView.layer.shadowOffset = CGSize.zero
+        thumbnailImageView.layer.shadowColor = UIColor.black.cgColor
+        thumbnailImageView.layer.shadowOpacity = 0.2
+        thumbnailImageView.layer.shadowPath = UIBezierPath(rect: thumbnailImageView.bounds).cgPath
+        thumbnailImageView.layer.masksToBounds = false
+
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: thumbnailImageView.topAnchor).isActive = true
@@ -59,11 +70,22 @@ class DramaTableViewCell: UITableViewCell {
         seasonCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
         seasonCountLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
         seasonCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+
+        addSubview(slider)
+        slider.translatesAutoresizingMaskIntoConstraints = false
+        slider.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        slider.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor).isActive = true
     }
 
     func setData(_ drama: DramaModel) {
-        thumbnailImageView.image = nil
+        titleLabel.text = drama.title
+        seasonCountLabel.text = "\(drama.seasonCount) \(drama.seasonCount == 1 ? "season" : "seasons")" // 簡易的に
+        slider.minimumValue = 0 // Todo: 保持している別の値
+        slider.maximumValue = Float(drama.seasonCount)
+        slider.setThumbImageValue()
 
+        thumbnailImageView.image = nil
         DispatchQueue.global(qos: .default).async {
             _ = URLSession.shared.dataTask(with: drama.imageURL) { [weak self] data, _, error in
                 if let error = error {
@@ -75,8 +97,6 @@ class DramaTableViewCell: UITableViewCell {
                 }
             }.resume()
         }
-
-        titleLabel.text = drama.title
-        seasonCountLabel.text = "\(drama.seasonCount) seasons"
     }
 }
+
