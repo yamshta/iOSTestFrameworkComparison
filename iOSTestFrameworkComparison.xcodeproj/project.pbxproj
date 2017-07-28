@@ -68,8 +68,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListModel.swift; path = ../Model/DramaListModel.swift; sourceTree = "<group>"; };
-		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaRepository.swift; path = ../Repository/DramaRepository.swift; sourceTree = "<group>"; };
+		2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListModel.swift; path = DramaListModel.swift; sourceTree = "<group>"; };
+		78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaRepository.swift; path = DramaRepository.swift; sourceTree = "<group>"; };
 		9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
 		9367434C1F2B1C48005B69EA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9367434D1F2B1C48005B69EA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -92,10 +92,10 @@
 		93F79EAD1F2A252A00028EBA /* DramaListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListModelTests.swift; sourceTree = "<group>"; };
 		93F79EB01F2A255000028EBA /* DramaListTranslatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTranslatorTests.swift; sourceTree = "<group>"; };
 		GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaDataStore.swift; sourceTree = "<group>"; };
-		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListBuilder.swift; path = Builder/DramaListBuilder.swift; sourceTree = "<group>"; };
-		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListTranslator.swift; path = ../Translator/DramaListTranslator.swift; sourceTree = "<group>"; };
-		K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListWireframe.swift; path = Wireframe/DramaListWireframe.swift; sourceTree = "<group>"; };
-		MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaEntity.swift; path = ../Entity/DramaEntity.swift; sourceTree = "<group>"; };
+		HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListBuilder.swift; path = DramaListBuilder.swift; sourceTree = "<group>"; };
+		K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListTranslator.swift; path = DramaListTranslator.swift; sourceTree = "<group>"; };
+		K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaListWireframe.swift; path = DramaListWireframe.swift; sourceTree = "<group>"; };
+		MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DramaEntity.swift; path = DramaEntity.swift; sourceTree = "<group>"; };
 		TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListUseCase.swift; sourceTree = "<group>"; };
 		VSE6NQK3NJYCOOG4JKFTHT24 /* DramaListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
 		XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListPresenter.swift; sourceTree = "<group>"; };
@@ -131,12 +131,12 @@
 		6EXKI1PGBS8SXA6DBN9Z1G91 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */,
-				K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */,
 				2LW98K8J1MGRKUUPZ3MY3D9A /* DramaListModel.swift */,
+				K2BISKI0JOCPX8QN4PSKZ0R5 /* DramaListTranslator.swift */,
+				TO9UZITYAZ32X752NBS1KGDU /* DramaListUseCase.swift */,
 			);
 			name = Domain;
-			path = UseCase;
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		9367434B1F2B1C48005B69EA /* Frameworks */ = {
@@ -148,14 +148,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		936743541F2B2C2B005B69EA /* Quick */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Quick;
+			path = Quick;
+			sourceTree = "<group>";
+		};
 		93C331D11F28DD64007FD5C2 = {
 			isa = PBXGroup;
 			children = (
+				9367434B1F2B1C48005B69EA /* Frameworks */,
+				93C331DB1F28DD64007FD5C2 /* Products */,
 				93C331DC1F28DD64007FD5C2 /* iOSTestFrameworkComparison */,
 				93C331F11F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests */,
 				93C331FC1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests */,
-				93C331DB1F28DD64007FD5C2 /* Products */,
-				9367434B1F2B1C48005B69EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,13 +180,13 @@
 		93C331DC1F28DD64007FD5C2 /* iOSTestFrameworkComparison */ = {
 			isa = PBXGroup;
 			children = (
+				T8TKKZCLX945C4XSDUZ2RXBS /* Data */,
+				EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */,
 				93F79E9D1F29BB6900028EBA /* Utility */,
 				93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */,
 				93C331E41F28DD64007FD5C2 /* Assets.xcassets */,
-				93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */,
 				93C331E91F28DD64007FD5C2 /* Info.plist */,
-				T8TKKZCLX945C4XSDUZ2RXBS /* Data */,
-				EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */,
+				93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */,
 			);
 			path = iOSTestFrameworkComparison;
 			sourceTree = "<group>";
@@ -187,8 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				93F79EA01F29C9B500028EBA /* DramaList */,
-				93C331F21F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift */,
 				93C331F41F28DD64007FD5C2 /* Info.plist */,
+				93C331F21F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift */,
 			);
 			path = iOSTestFrameworkComparisonTests;
 			sourceTree = "<group>";
@@ -196,8 +204,8 @@
 		93C331FC1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests */ = {
 			isa = PBXGroup;
 			children = (
-				93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */,
 				93C331FF1F28DD64007FD5C2 /* Info.plist */,
+				93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */,
 			);
 			path = iOSTestFrameworkComparisonUITests;
 			sourceTree = "<group>";
@@ -207,27 +215,31 @@
 			children = (
 			);
 			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		93F79EA01F29C9B500028EBA /* DramaList */ = {
 			isa = PBXGroup;
 			children = (
-				93F79EA51F29D16000028EBA /* DramaModel.swift */,
+				936743541F2B2C2B005B69EA /* Quick */,
+				93F79EAF1F2A253600028EBA /* XCTest */,
 				93F79EA71F29E7E000028EBA /* DramaListUseCaseStub.swift */,
 				93F79EAB1F29F65100028EBA /* DramaListViewControllerSpy.swift */,
-				93F79EAF1F2A253600028EBA /* Tests */,
+				93F79EA51F29D16000028EBA /* DramaModel.swift */,
 			);
 			name = DramaList;
+			path = DramaList;
 			sourceTree = "<group>";
 		};
-		93F79EAF1F2A253600028EBA /* Tests */ = {
+		93F79EAF1F2A253600028EBA /* XCTest */ = {
 			isa = PBXGroup;
 			children = (
-				93F79EA31F29CA2A00028EBA /* DramaListPresenterTests.swift */,
 				93F79EAD1F2A252A00028EBA /* DramaListModelTests.swift */,
+				93F79EA31F29CA2A00028EBA /* DramaListPresenterTests.swift */,
 				93F79EB01F2A255000028EBA /* DramaListTranslatorTests.swift */,
 			);
-			name = Tests;
+			name = XCTest;
+			path = XCTest;
 			sourceTree = "<group>";
 		};
 		CNSDIXQDFD72PBOD3ZB5BC02 /* View */ = {
@@ -237,19 +249,19 @@
 				9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */,
 			);
 			name = View;
-			path = ../View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CZ3ZURBZELZBH8JD0XONT4FA /* DramaList */ = {
 			isa = PBXGroup;
 			children = (
-				HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */,
-				K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */,
 				6EXKI1PGBS8SXA6DBN9Z1G91 /* Domain */,
 				FMRNA1R0NV2PSLM17WFBZK0E /* Presentation */,
+				HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */,
+				K2ORFY64GH0JT8V8C7GL6Z1Q /* DramaListWireframe.swift */,
 			);
 			name = DramaList;
-			path = ..;
+			path = DramaList;
 			sourceTree = "<group>";
 		};
 		EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */ = {
@@ -258,18 +270,18 @@
 				CZ3ZURBZELZBH8JD0XONT4FA /* DramaList */,
 			);
 			name = Scenes;
-			path = Home/Repository;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		FMRNA1R0NV2PSLM17WFBZK0E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				93F79E9B1F29B5A500028EBA /* DramaListState.swift */,
-				XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */,
 				CNSDIXQDFD72PBOD3ZB5BC02 /* View */,
+				XWCIQW0P752KQZEF1CCLEHCC /* DramaListPresenter.swift */,
+				93F79E9B1F29B5A500028EBA /* DramaListState.swift */,
 			);
 			name = Presentation;
-			path = Presenter;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		T8TKKZCLX945C4XSDUZ2RXBS /* Data */ = {
@@ -278,18 +290,18 @@
 				TBXN9R54P4KJ3L9QZHRDLQ6R /* Drama */,
 			);
 			name = Data;
-			path = Home/Entity;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		TBXN9R54P4KJ3L9QZHRDLQ6R /* Drama */ = {
 			isa = PBXGroup;
 			children = (
-				MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */,
 				GHIIRAUWQO7SA7QIX1911QS1 /* DramaDataStore.swift */,
+				MBJTN1TTHIIP1FEMGPM8NOU3 /* DramaEntity.swift */,
 				78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */,
 			);
 			name = Drama;
-			path = ../DataStore;
+			path = Drama;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,6 +501,7 @@
 				93C331E71F28DD64007FD5C2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
