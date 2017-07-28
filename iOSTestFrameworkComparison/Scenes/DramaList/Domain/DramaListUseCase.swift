@@ -2,7 +2,7 @@
 import Foundation
 
 protocol DramaListUseCase {
-    func fetchDramas(_ closure: @escaping (DramaModels) -> Void)
+    func fetchDramaList(_ closure: @escaping (DramaListModel) -> Void)
 }
 
 struct DramaListUseCaseImpl: DramaListUseCase {
@@ -14,8 +14,8 @@ struct DramaListUseCaseImpl: DramaListUseCase {
         self.translator = translator
     }
 
-    func fetchDramas(_ closure: @escaping (DramaModels) -> Void) {
-        repository.fetchDramas {
+    func fetchDramaList(_ closure: @escaping (DramaListModel) -> Void) {
+        repository.fetchDramaList {
             closure(translator.translate(from: $0))
         }
     }

@@ -20,7 +20,7 @@ class DramaListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        presenter.fetchDramas()
+        presenter.fetchDramaList()
     }
 }
 
@@ -82,14 +82,14 @@ extension DramaListViewController: DramaListViewControllerOutput {
 
 extension DramaListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.dramas.items.count
+        return presenter.dramaList.items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DramaTableViewCell.self), for: indexPath) as? DramaTableViewCell else {
             fatalError("DramaTableViewCell is not found")
         }
-        cell.setData(presenter.dramas.items[indexPath.row])
+        cell.setData(presenter.dramaList.items[indexPath.row])
         return cell
     }
 }

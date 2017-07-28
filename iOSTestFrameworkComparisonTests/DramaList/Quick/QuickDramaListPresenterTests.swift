@@ -23,8 +23,7 @@ class QuickDramaListPresenterTests: QuickSpec {
         var presenter: DramaListPresenterImpl!
 
         // テストで使う変数
-        var expectedNumberOfDramas: Int!
-        var doramasToBeReturned: DramaModels!
+        var dramaListToBeReturned: DramaListModel!
 
         describe("ドラマの取得について") {
             beforeEach {
@@ -32,35 +31,41 @@ class QuickDramaListPresenterTests: QuickSpec {
             }
 
             context("ドラマ数が3の場合") {
+                let expectedNumberOfDramaList = 3
+
                 beforeEach {
-                    expectedNumberOfDramas = 3
-                    doramasToBeReturned = DramaModel.createDramas(numberOfElements: expectedNumberOfDramas)
-                    useCaseStub.resulutToBeReturned = doramasToBeReturned
-                    presenter.fetchDramas()
+                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
+                    useCaseStub.resulutToBeReturned = dramaListToBeReturned
+                    presenter.fetchDramaList()
                 }
-                it("ドラマ数とexpectedNumberOfDramasが等しいこと") {
-                    expect(presenter.dramas.items.count).to(equal(expectedNumberOfDramas))
+                it("ドラマ数とexpectedNumberOfDramaListが等しいこと") {
+                    expect(presenter.dramaList.items.count).to(equal(expectedNumberOfDramaList))
                 }
             }
         }
 
         describe("DramaListStateについて") {
-            context("ドラマ数が3の場合") {
+            beforeEach {
+                presenter = DramaListPresenterImpl(viewController: viewControllerSpy, wireframe: wireframe, useCase: useCaseStub)
+            }
+
+            context("ドラマが存在しない場合") {
                 beforeEach {
-                    doramasToBeReturned = DramaModel.createDramas(numberOfElements: 0)
-                    useCaseStub.resulutToBeReturned = doramasToBeReturned
-                    presenter.fetchDramas()
+                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 0)
+                    useCaseStub.resulutToBeReturned = dramaListToBeReturned
+                    presenter.fetchDramaList()
+                    print(presenter.dramaList.items)
                 }
                 it("viewControllerSpy.dramaListStateが.blankであること") {
                     expect(viewControllerSpy.dramaListState).to(equal(DramaListState.blank))
                 }
             }
 
-            context("ドラマが存在しない場合") {
+            context("ドラマ数が3の場合") {
                 beforeEach {
-                    doramasToBeReturned = DramaModel.createDramas(numberOfElements: 3)
-                    useCaseStub.resulutToBeReturned = doramasToBeReturned
-                    presenter.fetchDramas()
+                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 3)
+                    useCaseStub.resulutToBeReturned = dramaListToBeReturned
+                    presenter.fetchDramaList()
                 }
                 it("viewControllerSpy.dramaListStateが.workingであること") {
                     expect(viewControllerSpy.dramaListState).to(equal(DramaListState.working))

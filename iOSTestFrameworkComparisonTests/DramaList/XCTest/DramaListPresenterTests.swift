@@ -23,48 +23,48 @@ class DramaListPresenterTests: XCTestCase {
     }
 
     // ドラマ数が３つになっていること
-    func test_fetchDramas_success_numberOfDramas() {
+    func test_fetchDramaList_success_numberOfDramaList() {
         // Given
-        let expectedNumberOfDramas = 3
-        let doramasToBeReturned = DramaModel.createDramas(numberOfElements: expectedNumberOfDramas)
-        useCaseStub.resulutToBeReturned = doramasToBeReturned
+        let expectedNumberOfDramaList = 3
+        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
+        useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When
-        presenter.fetchDramas()
+        presenter.fetchDramaList()
 
         // Then
-        XCTAssertEqual(expectedNumberOfDramas, presenter.dramas.items.count)
+        XCTAssertEqual(expectedNumberOfDramaList, presenter.dramaList.items.count)
     }
 
     // ドラマが存在しない場合、DramaListStateに.blankがセットされていること
-    func test_fetchDramas_success_setDramaListState_blank() {
+    func test_fetchDramaList_success_setDramaListState_blank() {
         // Given
         let expectedDramaListState = DramaListState.blank
-        let doramasToBeReturned = DramaModel.createDramas(numberOfElements: 0)
-        useCaseStub.resulutToBeReturned = doramasToBeReturned
+        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 0)
+        useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When
-        presenter.fetchDramas()
+        presenter.fetchDramaList()
 
         // Then
         XCTAssertEqual(expectedDramaListState, viewControllerSpy.dramaListState)
     }
 
     // ドラマが存在する場合、DramaListStateに.workingがセットされていること
-    func test_fetchDramas_success_setDramaListState_working() {
+    func test_fetchDramaList_success_setDramaListState_working() {
         // Given
         let expectedDramaListState = DramaListState.working
-        let doramasToBeReturned = DramaModel.createDramas(numberOfElements: 3)
-        useCaseStub.resulutToBeReturned = doramasToBeReturned
+        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 3)
+        useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When
-        presenter.fetchDramas()
+        presenter.fetchDramaList()
 
         // Then
         XCTAssertEqual(expectedDramaListState, viewControllerSpy.dramaListState)
     }
 
 //    // エラーの場合、DramaListStateに.errorがセットされていること
-//    func test_fetchDramas_success_setDramaListState_working() {
+//    func test_fetchDramaList_success_setDramaListState_working() {
 //    }
 }

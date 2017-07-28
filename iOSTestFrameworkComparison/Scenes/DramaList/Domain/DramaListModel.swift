@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct DramaModels {
+struct DramaListModel {
     var items = [DramaModel]()
 }
 

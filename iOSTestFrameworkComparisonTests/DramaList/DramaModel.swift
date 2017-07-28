@@ -11,13 +11,13 @@ import XCTest
 
 extension DramaModel {
     // 与えられた数値分モデルを渡す
-    static func createDramas(numberOfElements number: Int) -> DramaModels {
-        var dramaModels = DramaModels()
+    static func createDramaList(numberOfElements number: Int) -> DramaListModel {
+        var dramaListModel = DramaListModel()
         for i in 0..<number {
             let drama = createDrama(index: i)
-            dramaModels.items.append(drama)
+            dramaListModel.items.append(drama)
         }
-        return dramaModels
+        return dramaListModel
     }
 
     static func createDrama(index: Int = 0) -> DramaModel {

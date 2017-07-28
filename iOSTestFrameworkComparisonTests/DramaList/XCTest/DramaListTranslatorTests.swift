@@ -25,14 +25,14 @@ class DramaListTranslatorTests: XCTestCase {
     }
 
     // 変換後のアイテム数が等しいこと
-    func test_translate_success_numberOfDramas() {
+    func test_translate_success_numberOfDramaList() {
         // Given
 
         // When
-        let dramaModels = translator.translate(from: dramaEntities)
+        let dramaListModel = translator.translate(from: dramaEntities)
 
         // Then
-        XCTAssertEqual(dramaModels.items.count, 2)
+        XCTAssertEqual(dramaListModel.items.count, 2)
     }
 
     // 変換後のアイテムとEntitiesの順番が等しいこと
@@ -40,10 +40,10 @@ class DramaListTranslatorTests: XCTestCase {
         // Given
 
         // When
-        let dramaModels = translator.translate(from: dramaEntities)
+        let dramaListModel = translator.translate(from: dramaEntities)
 
         // Then
-        for (index, model) in dramaModels.items.enumerated() {
+        for (index, model) in dramaListModel.items.enumerated() {
             XCTAssertEqual(model.id, dramaEntities[index].id)
         }
     }

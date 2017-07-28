@@ -12,9 +12,9 @@ import XCTest
 class DramaListUseCaseStub: DramaListUseCase {
 
     // Testsで生成する際にこの値を設定する
-    var resulutToBeReturned: DramaModels!
+    var resulutToBeReturned: DramaListModel!
 
-    func fetchDramas(_ closure: @escaping (DramaModels) -> Void) {
+    func fetchDramaList(_ closure: @escaping (DramaListModel) -> Void) {
         // 設定された値をそのまま返す
         closure(resulutToBeReturned)
     }
