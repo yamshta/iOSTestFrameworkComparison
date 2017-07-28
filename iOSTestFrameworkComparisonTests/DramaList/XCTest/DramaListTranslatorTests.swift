@@ -24,7 +24,7 @@ class DramaListTranslatorTests: XCTestCase {
         translator = DramaListTranslatorImpl()
     }
 
-    // 変換後のアイテム数が等しいか
+    // 変換後のアイテム数が等しいこと
     func test_translate_success_numberOfDramas() {
         // Given
 
@@ -35,7 +35,7 @@ class DramaListTranslatorTests: XCTestCase {
         XCTAssertEqual(dramaModels.items.count, 2)
     }
 
-    // 変換後の初めのアイテムとEntitiesの初めのアイテムが等しいか
+    // 変換後のアイテムとEntitiesの順番が等しいこと
     func test_translate_success_equalFirstDrama() {
         // Given
 
@@ -43,9 +43,8 @@ class DramaListTranslatorTests: XCTestCase {
         let dramaModels = translator.translate(from: dramaEntities)
 
         // Then
-        XCTAssertEqual(dramaModels.items.first?.id, "1")
-        XCTAssertEqual(dramaModels.items.first?.title, "Doctor Who")
-        XCTAssertEqual(dramaModels.items.first?.imageURL, URL(string: "https://www.justwatch.com/images/poster/678041/s718/doctor-who"))
-        XCTAssertEqual(dramaModels.items.first?.seasonCount, 10)
+        for (index, model) in dramaModels.items.enumerated() {
+            XCTAssertEqual(model.id, dramaEntities[index].id)
+        }
     }
 }

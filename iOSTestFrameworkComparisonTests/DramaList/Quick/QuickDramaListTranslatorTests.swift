@@ -34,11 +34,10 @@ class QuickDramaListTranslatorTests: QuickSpec {
                 expect(dramaModels.items).to(haveCount(dramaEntities.count))
             }
 
-            it("変換後の最初のアイテムとEntitiesの最初のアイテムが等しいこと") {
-                expect(dramaModels.items.first?.id).to(equal(dramaEntities.first?.id))
-                expect(dramaModels.items.first?.title).to(equal(dramaEntities.first?.title))
-                expect(dramaModels.items.first?.imageURL).to(equal(URL(string: (dramaEntities.first?.image_url)!)))
-                expect(dramaModels.items.first?.seasonCount).to(equal(dramaEntities.first?.season_count))
+            it("変換後のアイテムとEntitiesの順番が等しいこと") {
+                for (index, model) in dramaModels.items.enumerated() {
+                    expect(model.id).to(equal(dramaEntities[index].id))
+                }
             }
         }
     }
