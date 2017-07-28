@@ -40,7 +40,7 @@ class QuickDramaListPresenterTests: QuickSpec {
                     presenter.fetchDramas()
                 }
                 it("expectedNumberOfDramasとdramas.items.countが等しいこと") {
-                    expect(expectedNumberOfDramas).to(equal(presenter.dramas.items.count))
+                    expect(presenter.dramas.items.count).to(equal(expectedNumberOfDramas))
                 }
             }
 
@@ -53,7 +53,7 @@ class QuickDramaListPresenterTests: QuickSpec {
                         presenter.fetchDramas()
                     }
                     it("viewControllerSpy.dramaListStateが.blankであること") {
-                        expect(DramaListState.blank).to(equal(viewControllerSpy.dramaListState))
+                        expect(viewControllerSpy.dramaListState).to(equal(DramaListState.blank))
                     }
                 }
 
@@ -64,7 +64,7 @@ class QuickDramaListPresenterTests: QuickSpec {
                         presenter.fetchDramas()
                     }
                     it("viewControllerSpy.dramaListStateが.workingであること") {
-                        expect(DramaListState.working).to(equal(viewControllerSpy.dramaListState))
+                        expect(viewControllerSpy.dramaListState).to(equal(DramaListState.working))
                     }
                 }
 

@@ -15,6 +15,7 @@
 		936743591F2B3A20005B69EA /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9367435B1F2B3AA0005B69EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; };
 		9367435C1F2B3AA0005B69EA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; };
+		936743601F2B41E5005B69EA /* QuickDramaListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */; };
 		93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */; };
 		93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E41F28DD64007FD5C2 /* Assets.xcassets */; };
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 		9367434C1F2B1C48005B69EA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9367434D1F2B1C48005B69EA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuickDramaListPresenterTests.swift; path = iOSTestFrameworkComparisonTests/QuickDramaListPresenterTests.swift; sourceTree = SOURCE_ROOT; };
+		9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDramaListModelTests.swift; sourceTree = "<group>"; };
 		93C331DA1F28DD64007FD5C2 /* iOSTestFrameworkComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestFrameworkComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C331E41F28DD64007FD5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */,
+				9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */,
 			);
 			path = Quick;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				936743561F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift in Sources */,
 				93F79EAE1F2A252A00028EBA /* DramaListModelTests.swift in Sources */,
 				93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */,
+				936743601F2B41E5005B69EA /* QuickDramaListModelTests.swift in Sources */,
 				93F79EA61F29D16000028EBA /* DramaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
