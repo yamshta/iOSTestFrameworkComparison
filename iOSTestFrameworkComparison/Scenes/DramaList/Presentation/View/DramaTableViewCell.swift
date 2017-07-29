@@ -13,6 +13,7 @@ class DramaTableViewCell: UITableViewCell {
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.accessibilityIdentifier = "thumbnailImageView"
         return imageView
     }()
 
@@ -20,6 +21,7 @@ class DramaTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = UIColor.darkGray
+        label.accessibilityIdentifier = "titleLabel"
         return label
     }()
 
@@ -27,11 +29,13 @@ class DramaTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor.gray
+        label.accessibilityIdentifier = "seasonCountLabel"
         return label
     }()
 
-    let slider: UISlider = {
+    let seasonSlider: UISlider = {
         let slider = UISlider()
+        slider.accessibilityIdentifier = "seasonSlider"
         return slider
     }()
 
@@ -71,19 +75,21 @@ class DramaTableViewCell: UITableViewCell {
         seasonCountLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
         seasonCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
-        addSubview(slider)
-        slider.translatesAutoresizingMaskIntoConstraints = false
-        slider.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
-        slider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        slider.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor).isActive = true
+        addSubview(seasonSlider)
+        seasonSlider.translatesAutoresizingMaskIntoConstraints = false
+        seasonSlider.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        seasonSlider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        seasonSlider.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor).isActive = true
     }
 
     func setData(_ drama: DramaModel) {
         titleLabel.text = drama.title
-        seasonCountLabel.text = "\(drama.seasonCount) \(drama.seasonCount == 1 ? "season" : "seasons")" // 簡易的に
-        slider.minimumValue = 0 // Todo: 保持している別の値
-        slider.maximumValue = Float(drama.seasonCount)
-        slider.setThumbImageValue()
+        // 簡易的に単数形を判断
+        seasonCountLabel.text = "\(drama.seasonCount) \(drama.seasonCount == 1 ? "season" : "seasons")"
+        // TODO: DBで保持している値を設定
+        seasonSlider.minimumValue = 0
+        seasonSlider.maximumValue = Float(drama.seasonCount)
+        seasonSlider.setThumbImageValue()
 
         thumbnailImageView.image = nil
         DispatchQueue.global(qos: .default).async {

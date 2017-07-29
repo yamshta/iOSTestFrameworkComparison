@@ -7,9 +7,32 @@ protocol DramaListViewControllerOutput: class {
 
 class DramaListViewController: UIViewController {
 
-    fileprivate let tableView = UITableView()
-    fileprivate let blankLabel = UILabel()
-    fileprivate let activityIndicatorView = UIActivityIndicatorView()
+    fileprivate let dramaListTableView: UITableView = {
+        let tableView = UITableView()
+        tableView.rowHeight = 100
+        tableView.estimatedRowHeight = UITableViewAutomaticDimension
+        tableView.allowsSelection = false
+        tableView.register(DramaTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(DramaTableViewCell.self))
+        tableView.accessibilityIdentifier = "dramaListTableView"
+        return tableView
+    }()
+
+    fileprivate let blankLabel: UILabel = {
+        let label = UILabel()
+        label.text = "データがありません😩"
+        label.textAlignment = .center
+        label.accessibilityIdentifier = "blankLabel"
+        return label
+    }()
+
+    fileprivate let loadActivityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicatorView = UIActivityIndicatorView()
+        activityIndicatorView.activityIndicatorViewStyle = .whiteLarge
+        activityIndicatorView.color = UIColor.darkGray
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.accessibilityIdentifier = "loadActivityIndicatorView"
+        return activityIndicatorView
+    }()
 
     fileprivate var presenter: DramaListPresenter!
 
@@ -29,33 +52,24 @@ extension DramaListViewController {
     fileprivate func setupUI() {
         view.backgroundColor = UIColor.white
 
-        blankLabel.text = "データがありません😩"
-        blankLabel.textAlignment = .center
         view.addSubview(blankLabel)
         blankLabel.translatesAutoresizingMaskIntoConstraints = false
         blankLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         blankLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.rowHeight = 100
-        tableView.estimatedRowHeight = UITableViewAutomaticDimension
-        tableView.allowsSelection = false
-        tableView.register(DramaTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(DramaTableViewCell.self))
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        dramaListTableView.dataSource = self
+        dramaListTableView.delegate = self
+        view.addSubview(dramaListTableView)
+        dramaListTableView.translatesAutoresizingMaskIntoConstraints = false
+        dramaListTableView.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+        dramaListTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        dramaListTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        dramaListTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 
-        activityIndicatorView.activityIndicatorViewStyle = .whiteLarge
-        activityIndicatorView.color = UIColor.darkGray
-        activityIndicatorView.hidesWhenStopped = true
-        view.addSubview(activityIndicatorView)
-        activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        activityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        view.addSubview(loadActivityIndicatorView)
+        loadActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        loadActivityIndicatorView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loadActivityIndicatorView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 
     @objc fileprivate func changeValueSlider(_ sender: UISlider) {
@@ -69,16 +83,16 @@ extension DramaListViewController: DramaListViewControllerOutput {
     func setDramaListState(_ state: DramaListState) {
         switch state {
         case .blank:
-            activityIndicatorView.stopAnimating()
+            loadActivityIndicatorView.stopAnimating()
             blankLabel.isHidden = false
-            tableView.isHidden = true
+            dramaListTableView.isHidden = true
         case .loading:
-            activityIndicatorView.startAnimating()
+            loadActivityIndicatorView.startAnimating()
         case .working:
-            activityIndicatorView.stopAnimating()
+            loadActivityIndicatorView.stopAnimating()
             blankLabel.isHidden = true
-            tableView.isHidden = false
-            tableView.reloadData()
+            dramaListTableView.isHidden = false
+            dramaListTableView.reloadData()
         case .error:
             print("error")
         }
@@ -95,7 +109,8 @@ extension DramaListViewController: UITableViewDataSource {
             fatalError("DramaTableViewCell is not found")
         }
         cell.setData(presenter.dramaList.items[indexPath.row])
-        cell.slider.addTarget(self, action: #selector(DramaListViewController.changeValueSlider(_:)), for: [.valueChanged, .touchUpInside]) // 簡易的に
+        // 簡易的にViewController側で設定しているが、DramaTableViewCellにdelegateを持たせるなどの方がいい
+        cell.seasonSlider.addTarget(self, action: #selector(DramaListViewController.changeValueSlider(_:)), for: [.valueChanged, .touchUpInside])
         return cell
     }
 }
