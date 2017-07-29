@@ -25,7 +25,7 @@ class DramaTableViewCell: UITableViewCell {
         return label
     }()
 
-    let seasonCountLabel: UILabel = {
+    let seasonLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor.gray
@@ -69,11 +69,11 @@ class DramaTableViewCell: UITableViewCell {
         titleLabel.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
-        addSubview(seasonCountLabel)
-        seasonCountLabel.translatesAutoresizingMaskIntoConstraints = false
-        seasonCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
-        seasonCountLabel.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
-        seasonCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        addSubview(seasonLabel)
+        seasonLabel.translatesAutoresizingMaskIntoConstraints = false
+        seasonLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
+        seasonLabel.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
+        seasonLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
         addSubview(seasonSlider)
         seasonSlider.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +85,7 @@ class DramaTableViewCell: UITableViewCell {
     func setData(_ drama: DramaModel) {
         titleLabel.text = drama.title
         // 簡易的に単数形を判断
-        seasonCountLabel.text = "\(drama.seasonCount) \(drama.seasonCount == 1 ? "season" : "seasons")"
+        seasonLabel.text = "\(drama.seasonCount) \(drama.seasonCount == 1 ? "season" : "seasons")"
         // TODO: DBで保持している値を設定
         seasonSlider.minimumValue = 0
         seasonSlider.maximumValue = Float(drama.seasonCount)
