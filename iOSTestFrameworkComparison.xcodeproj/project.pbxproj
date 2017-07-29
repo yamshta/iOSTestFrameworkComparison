@@ -191,9 +191,9 @@
 		93C331DC1F28DD64007FD5C2 /* iOSTestFrameworkComparison */ = {
 			isa = PBXGroup;
 			children = (
-				93EA54CF1F2B84D40065CEDE /* Utility */,
 				T8TKKZCLX945C4XSDUZ2RXBS /* Data */,
 				EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */,
+				93EA54CF1F2B84D40065CEDE /* Utility */,
 				93F79E9D1F29BB6900028EBA /* Utility */,
 				93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */,
 				93C331E41F28DD64007FD5C2 /* Assets.xcassets */,
@@ -226,9 +226,28 @@
 		93E4C2A91F2C417F00C3AC6E /* DramaList */ = {
 			isa = PBXGroup;
 			children = (
-				93E4C2AC1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift */,
+				93E4C2AF1F2C754200C3AC6E /* Quick */,
+				93E4C2AE1F2C750200C3AC6E /* XCTests */,
 			);
 			name = DramaList;
+			path = DramaList;
+			sourceTree = "<group>";
+		};
+		93E4C2AE1F2C750200C3AC6E /* XCTests */ = {
+			isa = PBXGroup;
+			children = (
+				93E4C2AC1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift */,
+			);
+			name = XCTests;
+			path = XCTests;
+			sourceTree = "<group>";
+		};
+		93E4C2AF1F2C754200C3AC6E /* Quick */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Quick;
+			path = Quick;
 			sourceTree = "<group>";
 		};
 		93EA54CF1F2B84D40065CEDE /* Utility */ = {
@@ -237,6 +256,7 @@
 				93EA54D21F2B86EE0065CEDE /* UISlider+.swift */,
 			);
 			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		93F79E9D1F29BB6900028EBA /* Utility */ = {

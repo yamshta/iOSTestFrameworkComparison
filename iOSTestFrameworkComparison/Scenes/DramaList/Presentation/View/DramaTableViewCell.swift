@@ -10,10 +10,10 @@ import UIKit
 
 class DramaTableViewCell: UITableViewCell {
 
-    let thumbnailImageView: UIImageView = {
+    let thumbImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.accessibilityIdentifier = "thumbnailImageView"
+        imageView.accessibilityIdentifier = "thumbImageView"
         return imageView
     }()
 
@@ -49,37 +49,37 @@ class DramaTableViewCell: UITableViewCell {
     }
 
     private func setupUI() {
-        addSubview(thumbnailImageView)
-        thumbnailImageView.translatesAutoresizingMaskIntoConstraints = false
-        thumbnailImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
-        thumbnailImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
-        thumbnailImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/6).isActive = true
-        thumbnailImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
-        thumbnailImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        addSubview(thumbImageView)
+        thumbImageView.translatesAutoresizingMaskIntoConstraints = false
+        thumbImageView.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
+        thumbImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
+        thumbImageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1/6).isActive = true
+        thumbImageView.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        thumbImageView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
 
-        thumbnailImageView.layer.shadowOffset = CGSize.zero
-        thumbnailImageView.layer.shadowColor = UIColor.black.cgColor
-        thumbnailImageView.layer.shadowOpacity = 0.2
-        thumbnailImageView.layer.shadowPath = UIBezierPath(rect: thumbnailImageView.bounds).cgPath
-        thumbnailImageView.layer.masksToBounds = false
+        thumbImageView.layer.shadowOffset = CGSize.zero
+        thumbImageView.layer.shadowColor = UIColor.black.cgColor
+        thumbImageView.layer.shadowOpacity = 0.2
+        thumbImageView.layer.shadowPath = UIBezierPath(rect: thumbImageView.bounds).cgPath
+        thumbImageView.layer.masksToBounds = false
 
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: thumbnailImageView.topAnchor).isActive = true
-        titleLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: thumbImageView.topAnchor).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
         addSubview(seasonCountLabel)
         seasonCountLabel.translatesAutoresizingMaskIntoConstraints = false
         seasonCountLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2).isActive = true
-        seasonCountLabel.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        seasonCountLabel.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
         seasonCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
 
         addSubview(seasonSlider)
         seasonSlider.translatesAutoresizingMaskIntoConstraints = false
-        seasonSlider.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 10).isActive = true
+        seasonSlider.leadingAnchor.constraint(equalTo: thumbImageView.trailingAnchor, constant: 10).isActive = true
         seasonSlider.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        seasonSlider.bottomAnchor.constraint(equalTo: thumbnailImageView.bottomAnchor).isActive = true
+        seasonSlider.bottomAnchor.constraint(equalTo: thumbImageView.bottomAnchor).isActive = true
     }
 
     func setData(_ drama: DramaModel) {
@@ -91,7 +91,7 @@ class DramaTableViewCell: UITableViewCell {
         seasonSlider.maximumValue = Float(drama.seasonCount)
         seasonSlider.setThumbImageValue()
 
-        thumbnailImageView.image = nil
+        thumbImageView.image = nil
         DispatchQueue.global(qos: .default).async {
             _ = URLSession.shared.dataTask(with: drama.imageURL) { [weak self] data, _, error in
                 if let error = error {
@@ -99,7 +99,7 @@ class DramaTableViewCell: UITableViewCell {
                 }
 
                 DispatchQueue.main.async {
-                    self?.thumbnailImageView.image = UIImage(data: data!)
+                    self?.thumbImageView.image = UIImage(data: data!)
                 }
             }.resume()
         }
