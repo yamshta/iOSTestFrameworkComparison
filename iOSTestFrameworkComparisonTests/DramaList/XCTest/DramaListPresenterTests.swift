@@ -26,7 +26,7 @@ class DramaListPresenterTests: XCTestCase {
     func test_fetchDramaList_success_numberOfDramaList() {
         // Given
         let expectedNumberOfDramaList = 3
-        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
+        let dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
         useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When
@@ -40,7 +40,7 @@ class DramaListPresenterTests: XCTestCase {
     func test_fetchDramaList_success_setDramaListState_blank() {
         // Given
         let expectedDramaListState = DramaListState.blank
-        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 0)
+        let dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: 0)
         useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When
@@ -54,7 +54,7 @@ class DramaListPresenterTests: XCTestCase {
     func test_fetchDramaList_success_setDramaListState_working() {
         // Given
         let expectedDramaListState = DramaListState.working
-        let dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 3)
+        let dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: 3)
         useCaseStub.resulutToBeReturned = dramaListToBeReturned
 
         // When

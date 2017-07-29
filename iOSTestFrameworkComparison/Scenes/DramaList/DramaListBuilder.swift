@@ -1,8 +1,8 @@
 
 import UIKit
 
-struct DramaBuilder {
-    static func build() -> UIViewController {
+struct DramaListBuilder {
+    static func build() -> DramaListViewController {
         let viewController = DramaListViewController()
         viewController.inject(
             presenter: DramaListPresenterImpl(

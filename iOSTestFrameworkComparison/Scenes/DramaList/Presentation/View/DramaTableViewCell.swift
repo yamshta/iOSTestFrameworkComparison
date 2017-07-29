@@ -96,10 +96,10 @@ class DramaTableViewCell: UITableViewCell {
             _ = URLSession.shared.dataTask(with: drama.imageURL) { [weak self] data, _, error in
                 if let error = error {
                     print(error)
-                }
-
-                DispatchQueue.main.async {
-                    self?.thumbImageView.image = UIImage(data: data!)
+                } else if let data = data {
+                    DispatchQueue.main.async {
+                        self?.thumbImageView.image = UIImage(data: data)
+                    }
                 }
             }.resume()
         }

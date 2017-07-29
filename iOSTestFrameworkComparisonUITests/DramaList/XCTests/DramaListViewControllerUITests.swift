@@ -1,5 +1,5 @@
 //
-//  DramaListTableViewCellUITests.swift
+//  DramaListViewControllerUITests.swift
 //  iOSTestFrameworkComparison
 //
 //  Created by Shunya Yamashita on 2017/07/29.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class DramaListTableViewCellUITests: XCTestCase {
+class DramaListViewControllerUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -22,7 +22,7 @@ class DramaListTableViewCellUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func test_display_tableView_cell() {
         let app = XCUIApplication()
         let tableView = app.tables["dramaListTableView"]
         XCTAssertTrue(tableView.exists)
@@ -30,7 +30,7 @@ class DramaListTableViewCellUITests: XCTestCase {
         let cell = tableView.cells.element(boundBy: 3)
         XCTAssertTrue(cell.exists)
 
-        // 非同期で画像をダウンロードしているので遅延処理を挟んだが失敗した
+        // 非同期で画像をダウンロードしているので遅延処理を挟んだが失敗する
 //        let thumbImageView = cell.images["thumbImageView"]
 //        XCTAssertTrue(thumbImageView.exists)
 
@@ -40,7 +40,8 @@ class DramaListTableViewCellUITests: XCTestCase {
         let seasonSlider = cell.sliders["seasonSlider"]
         XCTAssertTrue(seasonSlider.exists)
 
-        //　失敗した
+        //　動作せずに失敗する
+        // 上のテストが通ってるので要素は取得できている筈だが..
 //        seasonSlider.adjust(toNormalizedSliderPosition: 1.0)
     }
 }

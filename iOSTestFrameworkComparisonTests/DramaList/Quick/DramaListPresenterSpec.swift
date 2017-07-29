@@ -34,7 +34,7 @@ class DramaListPresenterSpec: QuickSpec {
                 let expectedNumberOfDramaList = 3
 
                 beforeEach {
-                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
+                    dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: expectedNumberOfDramaList)
                     useCaseStub.resulutToBeReturned = dramaListToBeReturned
                     presenter.fetchDramaList()
                 }
@@ -51,7 +51,7 @@ class DramaListPresenterSpec: QuickSpec {
 
             context("ドラマが存在しない場合") {
                 beforeEach {
-                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 0)
+                    dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: 0)
                     useCaseStub.resulutToBeReturned = dramaListToBeReturned
                     presenter.fetchDramaList()
                     print(presenter.dramaList.items)
@@ -63,7 +63,7 @@ class DramaListPresenterSpec: QuickSpec {
 
             context("ドラマ数が3の場合") {
                 beforeEach {
-                    dramaListToBeReturned = DramaModel.createDramaList(numberOfElements: 3)
+                    dramaListToBeReturned = DramaListModel.createDramaList(numberOfElements: 3)
                     useCaseStub.resulutToBeReturned = dramaListToBeReturned
                     presenter.fetchDramaList()
                 }

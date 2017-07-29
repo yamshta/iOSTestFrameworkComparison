@@ -7,7 +7,7 @@ protocol DramaListViewControllerOutput: class {
 
 class DramaListViewController: UIViewController {
 
-    fileprivate let dramaListTableView: UITableView = {
+    let dramaListTableView: UITableView = {
         let tableView = UITableView()
         tableView.rowHeight = 100
         tableView.estimatedRowHeight = UITableViewAutomaticDimension
@@ -17,7 +17,7 @@ class DramaListViewController: UIViewController {
         return tableView
     }()
 
-    fileprivate let blankLabel: UILabel = {
+    let blankLabel: UILabel = {
         let label = UILabel()
         label.text = "データがありません😩"
         label.textAlignment = .center
@@ -25,7 +25,7 @@ class DramaListViewController: UIViewController {
         return label
     }()
 
-    fileprivate let loadActivityIndicatorView: UIActivityIndicatorView = {
+    let loadActivityIndicatorView: UIActivityIndicatorView = {
         let activityIndicatorView = UIActivityIndicatorView()
         activityIndicatorView.activityIndicatorViewStyle = .whiteLarge
         activityIndicatorView.color = UIColor.darkGray

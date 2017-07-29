@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let rootViewController = DramaBuilder.build()
+        let rootViewController = DramaListBuilder.build()
         let navigationViewController = UINavigationController(rootViewController: rootViewController)
 
         window = UIWindow(frame: UIScreen.main.bounds)
