@@ -1,5 +1,5 @@
 //
-//  QuickDramaListModelTests.swift
+//  DramaListModelSpec.swift
 //  iOSTestFrameworkComparison
 //
 //  Created by Shunya Yamashita on 2017/07/28.
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 @testable import iOSTestFrameworkComparison
 
-class QuickDramaListModelTests: QuickSpec {
+class DramaListModelSpec: QuickSpec {
     override func spec() {
         describe("Modelについて") {
             context("Entityから初期化した場合に") {

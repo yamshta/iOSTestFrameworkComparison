@@ -10,19 +10,20 @@
 		4ECVCWE8U2LZSSHYZR8VDLGN /* DramaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78TRJRMYN512Y0VCQ5KWFGBZ /* DramaRepository.swift */; };
 		7WKA16J39E8L4AQ8TOBN71U4 /* DramaListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = HZFNNH6WNHTDLUGD1KY01CR7 /* DramaListBuilder.swift */; };
 		9303AA031F29905600D05DF2 /* DramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */; };
-		936743561F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */; };
+		936743561F2B2CB1005B69EA /* DramaListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936743551F2B2CB1005B69EA /* DramaListPresenterSpec.swift */; };
 		936743581F2B3A20005B69EA /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		936743591F2B3A20005B69EA /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9367435B1F2B3AA0005B69EA /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434C1F2B1C48005B69EA /* Nimble.framework */; };
 		9367435C1F2B3AA0005B69EA /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9367434D1F2B1C48005B69EA /* Quick.framework */; };
-		936743601F2B41E5005B69EA /* QuickDramaListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */; };
-		936743621F2B44FE005B69EA /* QuickDramaListTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936743611F2B44FE005B69EA /* QuickDramaListTranslatorTests.swift */; };
+		936743601F2B41E5005B69EA /* DramaListModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367435F1F2B41E5005B69EA /* DramaListModelSpec.swift */; };
+		936743621F2B44FE005B69EA /* DramaListTranslatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936743611F2B44FE005B69EA /* DramaListTranslatorSpec.swift */; };
 		93C331DE1F28DD64007FD5C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */; };
 		93C331E51F28DD64007FD5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E41F28DD64007FD5C2 /* Assets.xcassets */; };
 		93C331E81F28DD64007FD5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C331E61F28DD64007FD5C2 /* LaunchScreen.storyboard */; };
 		93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331F21F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift */; };
 		93C331FE1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */; };
 		93E4C2AD1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4C2AC1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift */; };
+		93E4C2B51F2C840F00C3AC6E /* DramaListTableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4C2B41F2C840F00C3AC6E /* DramaListTableViewCellSpec.swift */; };
 		93EA54D31F2B86EE0065CEDE /* UISlider+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93EA54D21F2B86EE0065CEDE /* UISlider+.swift */; };
 		93F79E9C1F29B5A500028EBA /* DramaListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F79E9B1F29B5A500028EBA /* DramaListState.swift */; };
 		93F79EA41F29CA2A00028EBA /* DramaListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F79EA31F29CA2A00028EBA /* DramaListPresenterTests.swift */; };
@@ -78,9 +79,9 @@
 		9303AA021F29905600D05DF2 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
 		9367434C1F2B1C48005B69EA /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		9367434D1F2B1C48005B69EA /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDramaListPresenterTests.swift; sourceTree = "<group>"; };
-		9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDramaListModelTests.swift; sourceTree = "<group>"; };
-		936743611F2B44FE005B69EA /* QuickDramaListTranslatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickDramaListTranslatorTests.swift; sourceTree = "<group>"; };
+		936743551F2B2CB1005B69EA /* DramaListPresenterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListPresenterSpec.swift; sourceTree = "<group>"; };
+		9367435F1F2B41E5005B69EA /* DramaListModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListModelSpec.swift; sourceTree = "<group>"; };
+		936743611F2B44FE005B69EA /* DramaListTranslatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTranslatorSpec.swift; sourceTree = "<group>"; };
 		93C331DA1F28DD64007FD5C2 /* iOSTestFrameworkComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTestFrameworkComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C331E41F28DD64007FD5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		93C331FD1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSTestFrameworkComparisonUITests.swift; sourceTree = "<group>"; };
 		93C331FF1F28DD64007FD5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93E4C2AC1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTableViewCellUITests.swift; sourceTree = "<group>"; };
+		93E4C2B41F2C840F00C3AC6E /* DramaListTableViewCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListTableViewCellSpec.swift; sourceTree = "<group>"; };
 		93EA54D21F2B86EE0065CEDE /* UISlider+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISlider+.swift"; sourceTree = "<group>"; };
 		93F79E9B1F29B5A500028EBA /* DramaListState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListState.swift; sourceTree = "<group>"; };
 		93F79EA31F29CA2A00028EBA /* DramaListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DramaListPresenterTests.swift; sourceTree = "<group>"; };
@@ -160,9 +162,9 @@
 		936743541F2B2C2B005B69EA /* Quick */ = {
 			isa = PBXGroup;
 			children = (
-				9367435F1F2B41E5005B69EA /* QuickDramaListModelTests.swift */,
-				936743551F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift */,
-				936743611F2B44FE005B69EA /* QuickDramaListTranslatorTests.swift */,
+				9367435F1F2B41E5005B69EA /* DramaListModelSpec.swift */,
+				936743551F2B2CB1005B69EA /* DramaListPresenterSpec.swift */,
+				936743611F2B44FE005B69EA /* DramaListTranslatorSpec.swift */,
 			);
 			path = Quick;
 			sourceTree = "<group>";
@@ -194,7 +196,6 @@
 				T8TKKZCLX945C4XSDUZ2RXBS /* Data */,
 				EIGO9PDUOE0LJMM9MONCZPA1 /* Scenes */,
 				93EA54CF1F2B84D40065CEDE /* Utility */,
-				93F79E9D1F29BB6900028EBA /* Utility */,
 				93C331DD1F28DD64007FD5C2 /* AppDelegate.swift */,
 				93C331E41F28DD64007FD5C2 /* Assets.xcassets */,
 				93C331E91F28DD64007FD5C2 /* Info.plist */,
@@ -229,7 +230,6 @@
 				93E4C2AF1F2C754200C3AC6E /* Quick */,
 				93E4C2AE1F2C750200C3AC6E /* XCTests */,
 			);
-			name = DramaList;
 			path = DramaList;
 			sourceTree = "<group>";
 		};
@@ -238,15 +238,14 @@
 			children = (
 				93E4C2AC1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift */,
 			);
-			name = XCTests;
 			path = XCTests;
 			sourceTree = "<group>";
 		};
 		93E4C2AF1F2C754200C3AC6E /* Quick */ = {
 			isa = PBXGroup;
 			children = (
+				93E4C2B41F2C840F00C3AC6E /* DramaListTableViewCellSpec.swift */,
 			);
-			name = Quick;
 			path = Quick;
 			sourceTree = "<group>";
 		};
@@ -254,14 +253,6 @@
 			isa = PBXGroup;
 			children = (
 				93EA54D21F2B86EE0065CEDE /* UISlider+.swift */,
-			);
-			name = Utility;
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		93F79E9D1F29BB6900028EBA /* Utility */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -506,12 +497,12 @@
 				93F79EB11F2A255000028EBA /* DramaListTranslatorTests.swift in Sources */,
 				93F79EA41F29CA2A00028EBA /* DramaListPresenterTests.swift in Sources */,
 				93F79EA81F29E7E000028EBA /* DramaListUseCaseStub.swift in Sources */,
-				936743561F2B2CB1005B69EA /* QuickDramaListPresenterTests.swift in Sources */,
+				936743561F2B2CB1005B69EA /* DramaListPresenterSpec.swift in Sources */,
 				93F79EAE1F2A252A00028EBA /* DramaListModelTests.swift in Sources */,
 				93C331F31F28DD64007FD5C2 /* iOSTestFrameworkComparisonTests.swift in Sources */,
-				936743601F2B41E5005B69EA /* QuickDramaListModelTests.swift in Sources */,
+				936743601F2B41E5005B69EA /* DramaListModelSpec.swift in Sources */,
 				93F79EA61F29D16000028EBA /* DramaModel.swift in Sources */,
-				936743621F2B44FE005B69EA /* QuickDramaListTranslatorTests.swift in Sources */,
+				936743621F2B44FE005B69EA /* DramaListTranslatorSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +512,7 @@
 			files = (
 				93C331FE1F28DD64007FD5C2 /* iOSTestFrameworkComparisonUITests.swift in Sources */,
 				93E4C2AD1F2C449C00C3AC6E /* DramaListTableViewCellUITests.swift in Sources */,
+				93E4C2B51F2C840F00C3AC6E /* DramaListTableViewCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

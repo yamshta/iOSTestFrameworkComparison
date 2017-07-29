@@ -1,5 +1,5 @@
 //
-//  QuickDramaListPresenterTests.swift
+//  DramaListPresenterSpec.swift
 //  iOSTestFrameworkComparison
 //
 //  Created by Shunya Yamashita on 2017/07/28.
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 @testable import iOSTestFrameworkComparison
 
-class QuickDramaListPresenterTests: QuickSpec {
+class DramaListPresenterSpec: QuickSpec {
     // ここにテストコードを書いていく
     override func spec() {
         // DI(Dependency injection)

@@ -1,5 +1,5 @@
 //
-//  QuickDramaListTranslatorTests.swift
+//  DramaListTranslatorSpec.swift
 //  iOSTestFrameworkComparison
 //
 //  Created by Shunya Yamashita on 2017/07/28.
@@ -11,7 +11,7 @@ import Quick
 import Nimble
 @testable import iOSTestFrameworkComparison
 
-class QuickDramaListTranslatorTests: QuickSpec {
+class DramaListTranslatorSpec: QuickSpec {
     override func spec() {
         describe("モデルの変換について") {
             context("EntityからModelへ変換した場合") {
